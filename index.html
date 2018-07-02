@@ -3,20 +3,15 @@
 <meta charset="utf-8"/>
 
 <style>
-	.logo {
-	width:150px;
-	height: 150px;
-	border-radius: 50%;
-	text-align: left;
-	}
+
 	
 	body {
 	background: linear-gradient(90deg, gray, white);
-	margin: 40px;
 	}
 	
 	h1{
 	text-align: center;
+	padding: 150px;
 	}
 	
 	.personalphoto {
@@ -33,6 +28,45 @@
 	p {
 	font-size: 22px;
 	line-height: 2;
+	text-align: center;
+	margin: 100px;
+	}
+	
+	
+	.navbar {
+	background-color: black;
+	height: 150px;
+	justify-content: center;
+	}
+	
+	.navbar li {
+	font-size: 35px;
+	color: white;
+	list-style: none;
+	padding: 30px 10px 30px 10px;
+	height: 150px;
+	}
+	
+	.navbar a {
+	text-decoration: none;
+	}
+	
+	.navbar a:hover {
+	color: gray;
+	font-size: 40px;
+	}
+	
+	.navbar ul {
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	}
+	
+	#logo {
+	border-radius: 50%;
+	height: 110px;
+	width: 110px;
 	}
 	
 </style>
@@ -40,12 +74,20 @@
 
 <html>
 <body>
-	<img src="dolorem-ipsum.jpg" alt="Dolorem Ipsum Art" class="logo"/>
-
-	<h1>Cynthia Alvarez</h1>
-	<hr>
 	
-	<p>Hi, my name is Cynthia, but I use Dolorem-Ipsum as an alias for projects, websites, and channels. I build websites and write </p>
+	<div class="navbar">
+	<ul>
+		<li><img src="dolorem-ipsum.jpg" alt="Dolorem Ipsum Art" id="logo"/></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Projects</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	</div>
+	
+	<h1>Cynthia Alvarez</h1>
+
+	
+	<p>Hi, my name is Cynthia, but I use Dolorem-Ipsum as an alias for projects, websites, and channels. I build and design websites. </p>
 	
 	<img src="Me-FB.jpg" alt="photo of Cynthia" class="personalphoto"/>
 	
