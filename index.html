@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8"/>
-<link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet' />
-<link href='./styles/bootstrap.min.css' rel='stylesheet' />
-<link href='./styles/bootstrap.css' rel='stylesheet' />
+<link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+<link href='./styles/bootstrap.min.css' rel='stylesheet'>
+<link href='./styles/bootstrap.css' rel='stylesheet'>
+
 <style>
 	
 	h1{
@@ -13,70 +14,83 @@
 	font-family: 'Allerta Stencil';
 	}
 	
-	.personalphoto {
-	width: 250px;
-	height: 250px;
-	padding: 20px;
-	margin: auto;
-	
-	}
 	
 	
 	p {
-	font-size: 22px;
+	font-size: 23px;
 	line-height: 2;
 	text-align: center;
 	margin: 20%;
 	}
 	
-<!--	
-	.navbar {
-	background-color: black;
-	height: 150px;
-	}
-	
-	.navbar li {
-	font-size: 35px;
-	list-style: none;
-	padding: 30px 10px 30px 10px;
-	height: 150px;
-	}
-	
-	.navbar a {
-	text-decoration: none;
-	color: white;
-	}
-	
-	.navbar a:hover {
-	color: gray;
-	font-size: 40px;
-	}
-	
-	.navbar ul {
+	.logo{
+	border-radius: 70%;
+	width: 100px;
 	height: 100px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
 	}
+	
+	img:hover{
+	transform: scale(1.2);
+	}
+	
+	img {
+	width: 100%;
+	height: 100%;
+	}
+	
+	.jumbotron {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	}
+	
+	ul {
+	list-style-type: none;
+	}
+	
+	li {
+	display: inline-block;
+	font-size: 30px;
+	padding: 20px;
+	}
+	
+	.leftnav {
+	padding-right: 150px;
+	}
+	
+	.rightnav {
+	padding-right: 0px;
+	}
+	
+	a:hover {
+	text-decoration: none;
+	color: silver;
+	}
+	
+<!--Begin Bootstrap Snippet Gallery-->	
+body {
+    padding: 30px 0px;
+}
 
-	#logo {
-	border-radius: 50%;
-	height: 110px;
-	width: 110px;
-	}
+#lightbox .modal-content {
+    display: inline-block;
+    text-align: center;   
+}
 
--->	
-	
-	.gallery {
-	display: flex;
-	flex: row;
-	}
-	
-	.personalphoto:hover {
-	width: 300px;
-	height: 350px;
-	}
-	
+#lightbox .close {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 25, 25);
+    padding: 5px 8px;
+    border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    top: -15px;
+    right: -55px;
+    
+    z-index:1032;
+}	
+<!--End Bootstrap Snippet Gallery-->
+	 
 </style>
 </head>
 
@@ -85,11 +99,11 @@
 	
 	<div class="navbar">
 	<ul>
-		<!--Something wrong with img link. <li><img src="dolorem-ipsum.jpg" alt="Dolorem Ipsum Art" class="logo"/></li> -->
-		<li>DOLOREM IPSUM</li>
+		<li><img src="dolorem-ipsum.jpg" alt="Dolorem Ipsum Art" class="logo"/></li>
+		<li class="leftnav">DOLOREM IPSUM</li>	
 		<li><a href="#">About</a></li>
 		<li><a href="#">Projects</a></li>
-		<li><a href="#">Contact</a></li>
+		<li class="rightnav"><a href="#">Contact</a></li>
 	</ul>
 	</div>
 	
@@ -97,22 +111,58 @@
 
 	
 	<div class="jumbotron container">
-		<p>Hi, my name is Cynthia, but I use Dolorem-Ipsum as an alias for projects, websites, and channels. I build and design websites. </p>
+		<p>Hi, my name is Cynthia, but I use Dolorem-Ipsum as an alias for projects, websites, and channels. I am an amateur front-end web developer. For now, the websites I build are mostly limited to HMTL, CSS, and Javascript with the help of the front-end framework known as Bootstrap.</p>
 	</div>
+     
+
+<!--Begin Bootstrap Snippet Gallery-->
+<div class="container">
+<div class="row">
+    <div class="col-xs-6 col-sm-3">
+        <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
+            <img src="Noodle.jpg" alt="Ball Python">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+        <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
+            <img src="PixelMe.jpg" alt="Pixel Version of Cynthia">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+        <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
+            <img src="MeOwl.jpg" alt="Photo of Cynthia">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+        <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
+            <img src="NoodleAndI.jpg" alt="Photo of Cynthia and Noodle">
+        </a>
+    </div>
+</div>
+</div>
+
+<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
 	
-	<div class="gallery">	
-		<img src="Me-FB.jpg" alt="photo of Cynthia" class="personalphoto"/>
-	
-		<img src="Noodle.jpg" alt="photo of Cynthia's pet snake" class="personalphoto"/>
-	
-		<img src="MikeandI.jpeg" alt="photo of Cynthia and Michael" class="personalphoto"/>
-	</div>
-	
+<!--End Bootstrap Snippet Gallery-->
+ 
 	<div class="jumbotron container">
-	<p>When I'm not building websites, I like to hang out with Noodle (yes, I named my ball python Noodle) and my boyfriend, Michael.</p>
+	<p>When I'm not building websites, I like to hang out with Noodle (yes, I named my ball python Noodle), read, and of course, write.</p>
 	</div>
-	
+<!--Begin Bootstrap Snippet Gallery-->
+<script src='./scripts/gallery.js'></script>
+<!--End Bootstrap Snippet Gallery-->
 <script src='./scripts/jquery-3.3.1.min.js'></script>
-<script src='./scripts/bootstrap.min.js.'></script>
+<script src='./scripts/bootstrap.min.js'></script>
+
+
 </body>
 </html>
